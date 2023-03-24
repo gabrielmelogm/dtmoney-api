@@ -12,14 +12,22 @@ export class PrismaTransactionRepository implements transactionRepository {
     return await this.prisma.transactions.findMany();
   }
 
-  async create(transaction: CreateTransactionDto): Promise<void> {
-    await this.prisma.transactions.create({
+  async create(transaction: CreateTransactionDto): Promise<Transaction | any> {
+    return await this.prisma.transactions.create({
       data: {
         title: transaction.title,
         category: transaction.category,
         type: transaction.type,
         amount: transaction.amount,
         createAt: transaction.createdAt,
+      },
+    });
+  }
+
+  async destroy(id: string): Promise<void> {
+    await this.prisma.transactions.delete({
+      where: {
+        id,
       },
     });
   }

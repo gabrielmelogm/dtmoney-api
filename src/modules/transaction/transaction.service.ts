@@ -13,4 +13,8 @@ export class TransactionsService {
   async createTransaction(createTransactionDto: CreateTransactionDto) {
     return await this.transactionRepository.create(createTransactionDto);
   }
+
+  async deleteTransaction(id: string) {
+    return await this.transactionRepository.destroy(id);
+  }
 }

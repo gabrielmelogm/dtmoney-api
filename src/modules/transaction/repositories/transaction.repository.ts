@@ -4,5 +4,7 @@ import { Transaction } from '../entities/transaction.entity';
 export abstract class transactionRepository {
   abstract getAll(): Promise<Transaction[]>;
 
-  abstract create(transaction: CreateTransactionDto): Promise<void>;
+  abstract create(transaction: CreateTransactionDto): Promise<Transaction>;
+
+  abstract destroy(id: string): Promise<void>;
 }

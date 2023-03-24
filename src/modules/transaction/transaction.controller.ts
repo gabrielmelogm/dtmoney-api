@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
 import { CreateTransactionDto } from './dto/create-transaction.dto';
 import { TransactionsService } from './transaction.service';
 
@@ -16,5 +16,10 @@ export class TransactionsController {
     return await this.transactionsService.createTransaction(
       createTransactionDto,
     );
+  }
+
+  @Delete(':id')
+  async deleteTransaction(@Param('id') id: string) {
+    return await this.transactionsService.deleteTransaction(id);
   }
 }
