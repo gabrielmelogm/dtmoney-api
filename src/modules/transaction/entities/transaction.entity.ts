@@ -4,5 +4,5 @@ export class Transaction {
   category: string;
   type: string;
   amount: number;
-  createAt: string;
+  createdAt: string;
 }

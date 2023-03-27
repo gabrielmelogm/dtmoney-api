@@ -2,7 +2,7 @@ import { PrismaService } from '../../lib/prisma.service';
 import { Test, TestingModule } from '@nestjs/testing';
 import { TransactionsService } from './transaction.service';
 import { transactionRepository } from './repositories/transaction.repository';
-import { PrismaTransactionRepository } from './repositories/prisma/prismaTransaction.repository';
+import { PrismaTransactionRepository } from './repositories/implementations/prismaTransaction.repository';
 
 describe('TransactionsService', () => {
   let service: TransactionsService;

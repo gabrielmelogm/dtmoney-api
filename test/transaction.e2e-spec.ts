@@ -1,14 +1,25 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { INestApplication } from '@nestjs/common';
 import * as request from 'supertest';
-import { TransactionsModule } from '../src/modules/transaction/transaction.module';
+import { TransactionsController } from '../src/modules/transaction/transaction.controller';
+import { TransactionsService } from '../src/modules/transaction/transaction.service';
+import { transactionRepository } from '../src/modules/transaction/repositories/transaction.repository';
+import { TestTransactionRepository } from '../src/modules/transaction/repositories/implementations/testTransaction.repository';
+import { randomUUID } from 'crypto';
 
 describe('TransactionController (e2e)', () => {
   let app: INestApplication;
 
   beforeEach(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [TransactionsModule],
+      controllers: [TransactionsController],
+      providers: [
+        TransactionsService,
+        {
+          provide: transactionRepository,
+          useClass: TestTransactionRepository,
+        },
+      ],
     }).compile();
 
     app = moduleFixture.createNestApplication();
@@ -16,7 +27,6 @@ describe('TransactionController (e2e)', () => {
   });
 
   let data = {
-    id: '',
     title: 'Teste',
     category: 'Teste',
     type: 'deposit',
@@ -40,7 +50,7 @@ describe('TransactionController (e2e)', () => {
 
   it('/transactions (DELETE)', async () => {
     const response = await request(app.getHttpServer())
-      .delete(`/transactions/${data?.id}`)
+      .delete(`/transactions/${randomUUID()}`)
       .send(data);
 
     expect(response.statusCode).toBe(200);
