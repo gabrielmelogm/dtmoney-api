@@ -9,6 +9,8 @@ export class UsersService {
 
   async getByUsername(username: string) {
     const user = await this.userRepository.getByUsername(username);
+    if (!user) return null;
+
     return {
       id: user.id,
       username: user.username,

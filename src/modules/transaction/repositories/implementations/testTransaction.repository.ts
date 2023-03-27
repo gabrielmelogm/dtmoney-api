@@ -11,7 +11,7 @@ export class TestTransactionRepository extends transactionRepository {
       category: 'Teste',
       type: 'deposit',
       amount: 0.01,
-      createdAt: new Date().toDateString(),
+      createdAt: new Date().toISOString(),
     },
   ];
 
