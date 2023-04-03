@@ -1,4 +1,5 @@
 import { randomUUID } from 'crypto';
+
 import { CreateUserDto } from '../../dto/createUser.dto';
 import { User } from '../../entities/user.entity';
 import { usersRepository } from '../users.repository';
@@ -9,7 +10,7 @@ export class TestUserRepository implements usersRepository {
       id: randomUUID(),
       username: 'test',
       email: 'test@email.com.br',
-      password: randomUUID(),
+      password: '12345678',
       createdAt: new Date().toISOString(),
     },
   ];

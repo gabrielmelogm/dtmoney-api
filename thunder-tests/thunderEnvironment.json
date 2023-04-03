@@ -1,0 +1,31 @@
+[
+  {
+    "_id": "b62495e8-6c4f-4b50-9c9d-2014799b216e",
+    "name": "(Local Env)",
+    "default": false,
+    "global": true,
+    "local": true,
+    "sortNum": -1,
+    "created": "2023-04-03T19:20:00.714Z",
+    "modified": "2023-04-03T19:20:00.714Z",
+    "data": []
+  },
+  {
+    "_id": "bf038de3-646c-475c-8354-6e43a7667e7b",
+    "name": "dtmoney",
+    "default": true,
+    "sortNum": 20000,
+    "created": "2023-04-03T19:20:44.296Z",
+    "modified": "2023-04-03T19:20:44.296Z",
+    "data": [
+      {
+        "name": "HOST",
+        "value": "http://localhost:3000"
+      },
+      {
+        "name": "TOKEN",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGcxODJidWgwMDAwbGQ4Nmp3enh1MnB6IiwidXNlcm5hbWUiOiJnYWJyaWVsbWVsb2dtIiwiZW1haWwiOiJnYWJyaWVsQGdtYWlsLmNvbSIsImlhdCI6MTY4MDU1MDI1OCwiZXhwIjoxNjgwNTUxMTU4fQ.oOZy330U_Z3mlDXIkwP9x6G_AXJxQq45pFo3TwbHKzw"
+      }
+    ]
+  }
+]
