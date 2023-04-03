@@ -1,5 +1,6 @@
 import { INestApplication } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
+
 import { UsersService } from '../src/modules/users/users.service';
 import { UsersController } from '../src/modules/users/users.controller';
 import { usersRepository } from '../src/modules/users/repositories/users.repository';
@@ -26,9 +27,6 @@ describe('UsersController (e2e)', () => {
     await app.init();
   });
 
-  it('/users (GET)', async () =>
-    await request(app.getHttpServer()).get('/users/test').expect(200));
-
   it('/users (POST)', async () =>
     await request(app.getHttpServer())
       .post('/users')
@@ -38,4 +36,12 @@ describe('UsersController (e2e)', () => {
         password: '12345678',
       })
       .expect(201));
+
+  it('/users (GET)', async () => {
+    const response = await request(app.getHttpServer())
+      .get('/users/test')
+      .expect(200);
+
+    expect(response.body).toHaveProperty('id');
+  });
 });

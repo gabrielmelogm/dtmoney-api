@@ -1,0 +1,21 @@
+[
+  {
+    "_id": "820eadc9-92c6-4006-bb48-0045ab81d73b",
+    "colId": "history",
+    "containerId": "",
+    "name": "{{HOST}}/users",
+    "url": "{{HOST}}/users",
+    "method": "POST",
+    "sortNum": 0,
+    "created": "2023-04-03T19:24:26.583Z",
+    "modified": "2023-04-03T19:24:26.583Z",
+    "headers": [],
+    "params": [],
+    "body": {
+      "type": "json",
+      "raw": "{\n  \"username\": \"gabrielmelogm\",\n  \"email\": \"gabriel@gmail.com\",\n  \"password\": \"12345678\"\n}",
+      "form": []
+    },
+    "tests": []
+  }
+]
