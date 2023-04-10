@@ -31,7 +31,7 @@
     "method": "POST",
     "sortNum": 10000,
     "created": "2023-04-03T19:26:45.252Z",
-    "modified": "2023-04-03T20:05:30.933Z",
+    "modified": "2023-04-10T15:19:24.194Z",
     "headers": [],
     "params": [],
     "body": {
@@ -68,9 +68,13 @@
     "method": "GET",
     "sortNum": 10000,
     "created": "2023-04-03T19:35:04.903Z",
-    "modified": "2023-04-03T19:35:37.684Z",
+    "modified": "2023-04-10T15:20:11.682Z",
     "headers": [],
     "params": [],
+    "auth": {
+      "type": "bearer",
+      "bearer": "{{TOKEN}}"
+    },
     "tests": []
   },
   {
