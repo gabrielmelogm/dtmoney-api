@@ -12,6 +12,7 @@ export class TestTransactionRepository extends transactionRepository {
       type: 'deposit',
       amount: 0.01,
       createdAt: new Date().toISOString(),
+      userId: randomUUID(),
     },
   ];
 
@@ -26,6 +27,7 @@ export class TestTransactionRepository extends transactionRepository {
       type: transaction.type,
       amount: transaction.amount,
       createdAt: transaction.createdAt,
+      userId: randomUUID(),
     };
 
     this.data.push(item);

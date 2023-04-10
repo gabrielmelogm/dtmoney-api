@@ -17,6 +17,8 @@ model Users {
   password  String
   createdAt DateTime @default(now())
 
+  transactions Transactions[]
+
   @@map("users")
 }
 
@@ -27,6 +29,9 @@ model Transactions {
   type     String
   amount   Decimal  @db.Decimal(11, 2)
   createAt DateTime @default(now())
+
+  Users   Users?  @relation(fields: [usersId], references: [id])
+  usersId String?
 
   @@map("transactions")
 }

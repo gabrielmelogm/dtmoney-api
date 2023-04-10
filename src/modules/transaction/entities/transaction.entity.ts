@@ -5,4 +5,5 @@ export class Transaction {
   type: string;
   amount: number;
   createdAt: string;
+  userId: string;
 }

@@ -1,4 +1,10 @@
-import { IsDateString, IsNotEmpty, IsNumber } from 'class-validator';
+import {
+  IsDateString,
+  IsNotEmpty,
+  IsNumber,
+  IsString,
+  IsUUID,
+} from 'class-validator';
 
 export class CreateTransactionDto {
   @IsNotEmpty()
@@ -16,4 +22,8 @@ export class CreateTransactionDto {
   @IsNotEmpty()
   @IsDateString()
   createdAt: string;
+
+  @IsNotEmpty()
+  @IsString()
+  userId: string;
 }

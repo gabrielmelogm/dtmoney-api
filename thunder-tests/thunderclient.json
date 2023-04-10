@@ -86,12 +86,12 @@
     "method": "POST",
     "sortNum": 20000,
     "created": "2023-04-03T19:35:53.264Z",
-    "modified": "2023-04-03T19:38:56.223Z",
+    "modified": "2023-04-10T15:33:57.867Z",
     "headers": [],
     "params": [],
     "body": {
       "type": "json",
-      "raw": "{\n  \"title\": \"Desenvolvimento de site\",\n  \"category\": \"freelas\",\n  \"type\": \"deposit\",\n  \"amount\": 10000.00,\n  \"createdAt\": \"2023-04-03T19:37:54.924Z\"\n}",
+      "raw": "{\n  \"title\": \"Desenvolvimento de site\",\n  \"category\": \"freelas\",\n  \"type\": \"deposit\",\n  \"amount\": 10000.00,\n  \"createdAt\": \"2023-04-03T19:37:54.924Z\",\n  \"userId\": \"clg182buh0000ld86jwzxu2pz\"\n}",
       "form": []
     },
     "auth": {

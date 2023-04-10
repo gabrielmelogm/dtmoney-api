@@ -20,6 +20,7 @@ export class PrismaTransactionRepository implements transactionRepository {
         type: transaction.type,
         amount: transaction.amount,
         createAt: transaction.createdAt,
+        usersId: transaction.userId,
       },
     });
   }
