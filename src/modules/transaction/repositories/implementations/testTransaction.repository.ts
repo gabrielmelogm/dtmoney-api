@@ -16,7 +16,7 @@ export class TestTransactionRepository extends transactionRepository {
     },
   ];
 
-  async getAll(): Promise<Transaction[]> {
+  async getAll(userId: string): Promise<Transaction[]> {
     return this.data;
   }
   async create(transaction: CreateTransactionDto): Promise<Transaction | null> {

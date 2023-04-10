@@ -16,9 +16,9 @@ import { TransactionsService } from './transaction.service';
 export class TransactionsController {
   constructor(private readonly transactionsService: TransactionsService) {}
 
-  @Get()
-  async getTransactions() {
-    return await this.transactionsService.getTransactions();
+  @Get(':userId')
+  async getTransactions(@Param('userId') userId: string) {
+    return await this.transactionsService.getTransactions(userId);
   }
 
   @Post()

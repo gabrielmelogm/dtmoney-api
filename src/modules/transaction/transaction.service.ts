@@ -6,8 +6,8 @@ import { transactionRepository } from './repositories/transaction.repository';
 export class TransactionsService {
   constructor(private transactionRepository: transactionRepository) {}
 
-  async getTransactions() {
-    return await this.transactionRepository.getAll();
+  async getTransactions(userId: string) {
+    return await this.transactionRepository.getAll(userId);
   }
 
   async createTransaction(createTransactionDto: CreateTransactionDto) {

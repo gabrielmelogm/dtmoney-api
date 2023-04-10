@@ -30,8 +30,8 @@ model Transactions {
   amount   Decimal  @db.Decimal(11, 2)
   createAt DateTime @default(now())
 
-  Users   Users?  @relation(fields: [usersId], references: [id])
-  usersId String?
+  Users  Users?  @relation(fields: [userId], references: [id])
+  userId String?
 
   @@map("transactions")
 }

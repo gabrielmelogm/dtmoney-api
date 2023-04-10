@@ -8,8 +8,12 @@ import { transactionRepository } from '../transaction.repository';
 export class PrismaTransactionRepository implements transactionRepository {
   constructor(private prisma: PrismaService) {}
 
-  async getAll(): Promise<Transaction[] | any> {
-    return await this.prisma.transactions.findMany();
+  async getAll(userId: string): Promise<Transaction[] | any> {
+    return await this.prisma.transactions.findMany({
+      where: {
+        userId: userId,
+      },
+    });
   }
 
   async create(transaction: CreateTransactionDto): Promise<Transaction | any> {
@@ -20,7 +24,7 @@ export class PrismaTransactionRepository implements transactionRepository {
         type: transaction.type,
         amount: transaction.amount,
         createAt: transaction.createdAt,
-        usersId: transaction.userId,
+        userId: transaction.userId,
       },
     });
   }
