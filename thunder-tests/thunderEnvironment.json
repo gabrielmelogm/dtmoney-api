@@ -20,7 +20,11 @@
     "data": [
       {
         "name": "HOST",
-        "value": "http://localhost:3000"
+        "value": "http://localhost:3333"
+      },
+      {
+        "name": "TOKEN",
+        "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJjbGdtbTZqZ3AwMDAwaTBhZ2djNTRubWN6IiwidXNlcm5hbWUiOiJnYWJyaWVsbWVsb2dtIiwiZW1haWwiOiJnYWJyaWVsQGdtYWlsLmNvbSIsImlhdCI6MTY4MTg0ODI4OCwiZXhwIjoxNjgxODQ5MTg4fQ.PUGD02Cq14JFt5BXVj7oSSNdhgHVbaAptotqpdny63M"
       }
     ]
   }
